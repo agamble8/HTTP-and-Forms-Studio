@@ -22,16 +22,11 @@
 			form.addEventListener("submit", function(event) {
 				let searchTerm = document.querySelector("input[name=q]");
 				let searchEngine = document.querySelector("input[name=engine]:checked");
-				// if (searchTerm.value === ""){
-				// 	alert("A search term and search engine selection are required!");
-				// 	event.preventDefault();
-				// }
-				if (searchEngine === false){
-					alert("Search engine selection required!");
+				if (searchTerm.value === "" || !searchEngine){
+					alert("A search term and search engine selection are required!");
 					event.preventDefault();
 				}
-				
-				// setSearchEngine();
+				setSearchEngine();
 			});
     	});
 	</script>
